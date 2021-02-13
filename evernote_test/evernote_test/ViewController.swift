@@ -10,6 +10,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var NoteContent: UITextView!
     @IBOutlet var testView: UIView!
     
+//    触覚フィードバック
+    private let feedbackGenerator: Any? = {
+            if #available(iOS 10.0, *) {
+                let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+                generator.prepare()
+                return generator
+            } else {
+                return nil
+            }
+        }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -89,6 +101,10 @@ optionalHost: ENSessionHostSandbox)
         postTestNote(title: NoteTitle.text!, content: NoteContent.text!)
         NoteTitle.text = ""
         NoteContent.text = ""
+//        触覚フィードバック
+        if #available(iOS 10.0, *), let generator = feedbackGenerator as? UIImpactFeedbackGenerator {
+                    generator.impactOccurred()
+                }
         print("スワイプ成功")
     }
     
