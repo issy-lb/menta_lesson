@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="evernote_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3W4-Ab-cTI">
+                                <rect key="frame" x="30" y="125" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rOa-ag-VHy">
+                                <rect key="frame" x="30" y="259" width="271" height="149"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="76B-4f-kOb"/>
+                                    <constraint firstAttribute="height" constant="200" id="etg-3v-n96"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mw0-hK-Vi1">
+                                <rect key="frame" x="30" y="94" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJi-Sr-WKo">
+                                <rect key="frame" x="30" y="209" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7V-74-bAt">
+                                <rect key="frame" x="269" y="58" width="20" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" image="timer" catalog="system"/>
+                                <connections>
+                                    <action selector="onTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSm-Qb-Fhv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byz-XM-6hj">
+                                <rect key="frame" x="373" y="54" width="31" height="30"/>
+                                <state key="normal" title="投稿"/>
+                                <connections>
+                                    <action selector="postNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GC8-om-VtG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3W4-Ab-cTI" secondAttribute="trailing" constant="10" id="0Ae-LI-ON4"/>
+                            <constraint firstItem="cJi-Sr-WKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2z8-g0-7Sp"/>
+                            <constraint firstItem="rOa-ag-VHy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="7Wp-uC-Kuc"/>
+                            <constraint firstItem="Byz-XM-6hj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="BUd-QN-NKY"/>
+                            <constraint firstItem="Mw0-hK-Vi1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="EXF-Wa-Wvf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Byz-XM-6hj" secondAttribute="trailing" constant="10" id="Qeq-1B-uKY"/>
+                            <constraint firstItem="3W4-Ab-cTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ef6-Vj-hDB"/>
+                            <constraint firstItem="3W4-Ab-cTI" firstAttribute="top" secondItem="Mw0-hK-Vi1" secondAttribute="bottom" constant="10" id="kJB-cQ-Bhu"/>
+                            <constraint firstItem="cJi-Sr-WKo" firstAttribute="top" secondItem="3W4-Ab-cTI" secondAttribute="bottom" constant="50" id="mG0-V7-anB"/>
+                            <constraint firstItem="rOa-ag-VHy" firstAttribute="top" secondItem="cJi-Sr-WKo" secondAttribute="bottom" constant="29" id="o3j-l8-emq"/>
+                            <constraint firstItem="Mw0-hK-Vi1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tg9-eF-ocD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="NoteContent" destination="rOa-ag-VHy" id="NBX-Ab-tcE"/>
+                        <outlet property="NoteTitle" destination="3W4-Ab-cTI" id="wwy-1a-Pbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="CYY-Pv-SDD">
+                    <connections>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="dln-SC-9n0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="201" y="-70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

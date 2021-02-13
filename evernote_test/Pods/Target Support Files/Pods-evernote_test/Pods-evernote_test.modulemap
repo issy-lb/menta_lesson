@@ -1,0 +1,6 @@
+framework module Pods_evernote_test {
+  umbrella header "Pods-evernote_test-umbrella.h"
+
+  export *
+  module * { export * }
+}
