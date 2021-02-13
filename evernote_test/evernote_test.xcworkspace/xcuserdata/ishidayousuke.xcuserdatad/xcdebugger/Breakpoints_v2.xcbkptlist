@@ -14,10 +14,138 @@
             filePath = "evernote_test/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "postNote(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2AD66CF-BAE4-4C62-B3DD-686C4A148B85"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "evernote_test/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "postTestNote(title:content:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D2AD66CF-BAE4-4C62-B3DD-686C4A148B85 - 4a354ac9e222f0ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.ENSessionFindNotesResult&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in evernote_test.ViewController.(postTestNote in _803C45CAD270CC11B89E504E2E682B8A)(title: Swift.String, content: Swift.String) -&gt; ()"
+                  moduleName = "evernote_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ishidayousuke/Library/Mobile%20Documents/com~apple~CloudDocs/githubKraken/menta_lesson/evernote_test/evernote_test/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "D2AD66CF-BAE4-4C62-B3DD-686C4A148B85 - 17d7039c98525678"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.ENSessionFindNotesResult) -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.ENSessionFindNotesResult&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in evernote_test.ViewController.(postTestNote in _803C45CAD270CC11B89E504E2E682B8A)(title: Swift.String, content: Swift.String) -&gt; ()"
+                  moduleName = "evernote_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ishidayousuke/Library/Mobile%20Documents/com~apple~CloudDocs/githubKraken/menta_lesson/evernote_test/evernote_test/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9030AEA6-56E2-490F-AF89-8FC949F06A21"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "evernote_test/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "postTestNote(title:content:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A272791A-9290-44E8-ADA4-C66996D1FCBB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "evernote_test/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "postTestNote(title:content:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D48C4324-5D72-4171-A9F2-2BDEEB3E9E7B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "evernote_test/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "postTestNote(title:content:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D48C4324-5D72-4171-A9F2-2BDEEB3E9E7B - b55ea01f406752f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "evernote_test.ViewController.(postTestNote in _803C45CAD270CC11B89E504E2E682B8A)(title: Swift.String, content: Swift.String) -&gt; ()"
+                  moduleName = "evernote_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ishidayousuke/Library/Mobile%20Documents/com~apple~CloudDocs/githubKraken/menta_lesson/evernote_test/evernote_test/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  uuid = "D48C4324-5D72-4171-A9F2-2BDEEB3E9E7B - 4a354ac9e222f0ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.ENSessionFindNotesResult&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in evernote_test.ViewController.(postTestNote in _803C45CAD270CC11B89E504E2E682B8A)(title: Swift.String, content: Swift.String) -&gt; ()"
+                  moduleName = "evernote_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ishidayousuke/Library/Mobile%20Documents/com~apple~CloudDocs/githubKraken/menta_lesson/evernote_test/evernote_test/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

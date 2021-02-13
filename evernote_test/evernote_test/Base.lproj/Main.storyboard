@@ -63,6 +63,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3W4-Ab-cTI" secondAttribute="trailing" constant="10" id="0Ae-LI-ON4"/>
                             <constraint firstItem="cJi-Sr-WKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2z8-g0-7Sp"/>
@@ -80,14 +81,11 @@
                     <connections>
                         <outlet property="NoteContent" destination="rOa-ag-VHy" id="NBX-Ab-tcE"/>
                         <outlet property="NoteTitle" destination="3W4-Ab-cTI" id="wwy-1a-Pbv"/>
+                        <outlet property="testView" destination="8bC-Xf-vdC" id="Eth-vn-TU6"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="xSQ-Q6-Qeo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="CYY-Pv-SDD">
-                    <connections>
-                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="dln-SC-9n0"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="201" y="-70"/>
         </scene>
