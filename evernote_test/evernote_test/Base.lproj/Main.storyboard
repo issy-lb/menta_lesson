@@ -67,6 +67,13 @@
                                     <segue destination="KIZ-fZ-19C" kind="presentation" id="G9w-hb-6LR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piy-nR-z2c">
+                                <rect key="frame" x="191.5" y="54" width="31" height="30"/>
+                                <state key="normal" title="タグ"/>
+                                <connections>
+                                    <action selector="onGettag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vLU-QW-HIZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,9 +87,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Byz-XM-6hj" secondAttribute="trailing" constant="10" id="Qeq-1B-uKY"/>
                             <constraint firstItem="obu-Xt-RJb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="YwG-i0-Lj1"/>
                             <constraint firstItem="3W4-Ab-cTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ef6-Vj-hDB"/>
+                            <constraint firstItem="piy-nR-z2c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fYY-h8-quY"/>
                             <constraint firstItem="3W4-Ab-cTI" firstAttribute="top" secondItem="Mw0-hK-Vi1" secondAttribute="bottom" constant="10" id="kJB-cQ-Bhu"/>
                             <constraint firstItem="cJi-Sr-WKo" firstAttribute="top" secondItem="3W4-Ab-cTI" secondAttribute="bottom" constant="50" id="mG0-V7-anB"/>
                             <constraint firstItem="rOa-ag-VHy" firstAttribute="top" secondItem="cJi-Sr-WKo" secondAttribute="bottom" constant="29" id="o3j-l8-emq"/>
+                            <constraint firstItem="piy-nR-z2c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="sTV-Yt-EVt"/>
                             <constraint firstItem="Mw0-hK-Vi1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tg9-eF-ocD"/>
                             <constraint firstItem="obu-Xt-RJb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uCy-IV-Vdh"/>
                         </constraints>

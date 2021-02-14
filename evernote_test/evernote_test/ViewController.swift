@@ -73,6 +73,12 @@ class ViewController: UIViewController {
         text.text! += dateString
     }
     
+//    タグを表示する操作
+    @IBAction func onGettag(_ sender: Any) {
+        getTag()
+    }
+    
+    
 //    ノートを投稿する関数
     private func postTestNote(title:String,content:String) {
         ENSession.setSharedSessionConsumerKey(CONSUMER_KEY, consumerSecret: CONSUMER_SECRET,
@@ -148,6 +154,34 @@ optionalHost: ENSessionHostSandbox)
         }else{
             self.selectNotebook.setTitle(self.selectedNotebook?.name!, for: .normal)
         }
+    }
+    
+//    タグ取得関数
+    func getTag(){
+        ENSession.setSharedSessionConsumerKey(CONSUMER_KEY, consumerSecret: CONSUMER_SECRET,
+optionalHost: ENSessionHostSandbox)
+        let session = ENSession.shared
+        if session.isAuthenticated {
+            session.authenticate(with: self, preferRegistration: false, completion: { error in
+                if error == nil {
+                    let store = session.primaryNoteStore()
+                    store?.listTags(completion: {tags,error in
+                        tags?.forEach{tag in
+                            print(tag.name ?? "nil")
+                        }
+                    })
+                } else {
+                    print("Authentication error: \(error)")
+                }
+            })
+    }else {
+        session.authenticate(with: self, preferRegistration: false, completion: { error in
+            if error == nil {
+            } else {
+                print("Authentication error: \(error)")
+            }
+        })
+    }
     }
 
     
