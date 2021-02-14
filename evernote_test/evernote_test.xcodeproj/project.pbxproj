@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B3DFA66A665EDD41434A2D0 /* Pods_evernote_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F962C9F065015840F2A08D /* Pods_evernote_test.framework */; };
+		5759AB8325D922C000A0CB15 /* TestTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5759AB8225D922C000A0CB15 /* TestTextView.swift */; };
 		57A6060925D6B7100006A2E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6060825D6B7100006A2E1 /* AppDelegate.swift */; };
 		57A6060B25D6B7100006A2E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6060A25D6B7100006A2E1 /* SceneDelegate.swift */; };
 		57A6060D25D6B7100006A2E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6060C25D6B7100006A2E1 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5759AB8225D922C000A0CB15 /* TestTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextView.swift; sourceTree = "<group>"; };
 		57A6060525D6B7100006A2E1 /* evernote_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evernote_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A6060825D6B7100006A2E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57A6060A25D6B7100006A2E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				57A6060A25D6B7100006A2E1 /* SceneDelegate.swift */,
 				57A6060C25D6B7100006A2E1 /* ViewController.swift */,
 				57A6060E25D6B7100006A2E1 /* Main.storyboard */,
+				5759AB8225D922C000A0CB15 /* TestTextView.swift */,
 				57A6062125D8AAF90006A2E1 /* NotebookListView.swift */,
 				57A6061125D6B7150006A2E1 /* Assets.xcassets */,
 				57A6061325D6B7150006A2E1 /* LaunchScreen.storyboard */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A6060D25D6B7100006A2E1 /* ViewController.swift in Sources */,
+				5759AB8325D922C000A0CB15 /* TestTextView.swift in Sources */,
 				57A6062225D8AAF90006A2E1 /* NotebookListView.swift in Sources */,
 				57A6060925D6B7100006A2E1 /* AppDelegate.swift in Sources */,
 				57A6060B25D6B7100006A2E1 /* SceneDelegate.swift in Sources */,
