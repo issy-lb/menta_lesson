@@ -4,11 +4,14 @@ import EvernoteSDK
 class ViewController: UIViewController {
     let CONSUMER_KEY    = "yosuke-8489"
     let CONSUMER_SECRET = "362e676ef94398b6"
+    var selectedNotebook:ENNotebook?
     
     
     @IBOutlet weak var NoteTitle: UITextField!
     @IBOutlet weak var NoteContent: UITextView!
     @IBOutlet var testView: UIView!
+    @IBOutlet weak var selectNotebook: UIButton!
+    
     
 //    触覚フィードバック
     private let feedbackGenerator: Any? = {
@@ -24,6 +27,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNotebook()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(onSwiped(_:)))
         swipe.direction = .left
@@ -44,7 +50,20 @@ class ViewController: UIViewController {
         NoteTitle.text = ""
         NoteContent.text = ""
     }
-
+//    スワイプの時の操作
+    @objc func onSwiped(_ sender:UISwipeGestureRecognizer){
+        postTestNote(title: NoteTitle.text!, content: NoteContent.text!)
+        NoteTitle.text = ""
+        NoteContent.text = ""
+//        触覚フィードバック
+        if #available(iOS 10.0, *), let generator = feedbackGenerator as? UIImpactFeedbackGenerator {
+                    generator.impactOccurred()
+                }
+        print("スワイプ成功")
+    }
+    
+    
+    
 //    タイムスタンプを押す関数
     func timestamp(text:UITextView){
         let dt = Date()
@@ -76,7 +95,7 @@ optionalHost: ENSessionHostSandbox)
                     note.title = title
                     note.content = ENNoteContent(string: content)
 //                    1つ目のノートブックに投稿する
-                    session.upload(note, notebook: notebook, completion: { noteRef, error in
+                    session.upload(note, notebook: self.selectedNotebook, completion: { noteRef, error in
                         if error == nil {
                             print("Note Upload OK")
                         } else {
@@ -95,18 +114,42 @@ optionalHost: ENSessionHostSandbox)
             })
         }
     }
-    
-//    スワイプの時の操作
-    @objc func onSwiped(_ sender:UISwipeGestureRecognizer){
-        postTestNote(title: NoteTitle.text!, content: NoteContent.text!)
-        NoteTitle.text = ""
-        NoteContent.text = ""
-//        触覚フィードバック
-        if #available(iOS 10.0, *), let generator = feedbackGenerator as? UIImpactFeedbackGenerator {
-                    generator.impactOccurred()
+//   ノートブック設定
+    func setNotebook(){
+        if selectedNotebook == nil{
+            ENSession.setSharedSessionConsumerKey(CONSUMER_KEY, consumerSecret: CONSUMER_SECRET,
+    optionalHost: ENSessionHostSandbox)
+            
+            let session = ENSession.shared
+            if session.isAuthenticated {
+                session.authenticate(with: self, preferRegistration: false, completion: { error in
+                    if error == nil {
+                        session.listNotebooks(completion: {
+                        notebooks,error in
+                            if error == nil && (notebooks != nil){
+                                self.selectedNotebook = notebooks![0]
+                                self.selectNotebook.setTitle(self.selectedNotebook?.name!, for: .normal)
+
+                                }
+                            }
+                        )
+                    } else {
+                        print("Authentication error: \(error)")
+                    }
+                })
+        }else {
+            session.authenticate(with: self, preferRegistration: false, completion: { error in
+                if error == nil {
+                } else {
+                    print("Authentication error: \(error)")
                 }
-        print("スワイプ成功")
+            })
+        }
+        }else{
+            self.selectNotebook.setTitle(self.selectedNotebook?.name!, for: .normal)
+        }
     }
+
     
     
     override func didReceiveMemoryWarning() {

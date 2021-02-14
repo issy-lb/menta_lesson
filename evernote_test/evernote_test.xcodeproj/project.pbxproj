@@ -14,6 +14,7 @@
 		57A6061025D6B7100006A2E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A6060E25D6B7100006A2E1 /* Main.storyboard */; };
 		57A6061225D6B7150006A2E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A6061125D6B7150006A2E1 /* Assets.xcassets */; };
 		57A6061525D6B7150006A2E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A6061325D6B7150006A2E1 /* LaunchScreen.storyboard */; };
+		57A6062225D8AAF90006A2E1 /* NotebookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6062125D8AAF90006A2E1 /* NotebookListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		57A6061125D6B7150006A2E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A6061425D6B7150006A2E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57A6061625D6B7150006A2E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A6062125D8AAF90006A2E1 /* NotebookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookListView.swift; sourceTree = "<group>"; };
 		62DDC8FF587CEACD1838E9B7 /* Pods-evernote_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernote_test.debug.xcconfig"; path = "Target Support Files/Pods-evernote_test/Pods-evernote_test.debug.xcconfig"; sourceTree = "<group>"; };
 		C4F962C9F065015840F2A08D /* Pods_evernote_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evernote_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD0A19F9F86A9E38A1B9917 /* Pods-evernote_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernote_test.release.xcconfig"; path = "Target Support Files/Pods-evernote_test/Pods-evernote_test.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				57A6060A25D6B7100006A2E1 /* SceneDelegate.swift */,
 				57A6060C25D6B7100006A2E1 /* ViewController.swift */,
 				57A6060E25D6B7100006A2E1 /* Main.storyboard */,
+				57A6062125D8AAF90006A2E1 /* NotebookListView.swift */,
 				57A6061125D6B7150006A2E1 /* Assets.xcassets */,
 				57A6061325D6B7150006A2E1 /* LaunchScreen.storyboard */,
 				57A6061625D6B7150006A2E1 /* Info.plist */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A6060D25D6B7100006A2E1 /* ViewController.swift in Sources */,
+				57A6062225D8AAF90006A2E1 /* NotebookListView.swift in Sources */,
 				57A6060925D6B7100006A2E1 /* AppDelegate.swift in Sources */,
 				57A6060B25D6B7100006A2E1 /* SceneDelegate.swift in Sources */,
 			);

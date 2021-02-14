@@ -60,6 +60,13 @@
                                     <action selector="postNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GC8-om-VtG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obu-Xt-RJb">
+                                <rect key="frame" x="10" y="54" width="138" height="30"/>
+                                <state key="normal" title="ノートがありません"/>
+                                <connections>
+                                    <segue destination="KIZ-fZ-19C" kind="presentation" id="G9w-hb-6LR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,23 +78,59 @@
                             <constraint firstItem="Byz-XM-6hj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="BUd-QN-NKY"/>
                             <constraint firstItem="Mw0-hK-Vi1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="EXF-Wa-Wvf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Byz-XM-6hj" secondAttribute="trailing" constant="10" id="Qeq-1B-uKY"/>
+                            <constraint firstItem="obu-Xt-RJb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="YwG-i0-Lj1"/>
                             <constraint firstItem="3W4-Ab-cTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ef6-Vj-hDB"/>
                             <constraint firstItem="3W4-Ab-cTI" firstAttribute="top" secondItem="Mw0-hK-Vi1" secondAttribute="bottom" constant="10" id="kJB-cQ-Bhu"/>
                             <constraint firstItem="cJi-Sr-WKo" firstAttribute="top" secondItem="3W4-Ab-cTI" secondAttribute="bottom" constant="50" id="mG0-V7-anB"/>
                             <constraint firstItem="rOa-ag-VHy" firstAttribute="top" secondItem="cJi-Sr-WKo" secondAttribute="bottom" constant="29" id="o3j-l8-emq"/>
                             <constraint firstItem="Mw0-hK-Vi1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tg9-eF-ocD"/>
+                            <constraint firstItem="obu-Xt-RJb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uCy-IV-Vdh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="NoteContent" destination="rOa-ag-VHy" id="NBX-Ab-tcE"/>
                         <outlet property="NoteTitle" destination="3W4-Ab-cTI" id="wwy-1a-Pbv"/>
+                        <outlet property="selectNotebook" destination="obu-Xt-RJb" id="I6E-yO-u8d"/>
                         <outlet property="testView" destination="8bC-Xf-vdC" id="Eth-vn-TU6"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="xSQ-Q6-Qeo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201" y="-70"/>
+            <point key="canvasLocation" x="-43" y="-78"/>
+        </scene>
+        <!--Notebook List View-->
+        <scene sceneID="xjs-ZL-hec">
+            <objects>
+                <viewController id="KIZ-fZ-19C" customClass="NotebookListView" customModule="evernote_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ud7-8P-aqm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbD-C3-6ag">
+                                <rect key="frame" x="1" y="30" width="403" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6lV-Jj-Al9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6lV-Jj-Al9" firstAttribute="bottom" secondItem="sbD-C3-6ag" secondAttribute="bottom" id="8jk-9O-x0B"/>
+                            <constraint firstItem="6lV-Jj-Al9" firstAttribute="trailing" secondItem="sbD-C3-6ag" secondAttribute="trailing" constant="10" id="ZI0-gv-1uq"/>
+                            <constraint firstItem="sbD-C3-6ag" firstAttribute="top" secondItem="6lV-Jj-Al9" secondAttribute="top" constant="30" id="eYd-vK-37W"/>
+                            <constraint firstItem="sbD-C3-6ag" firstAttribute="leading" secondItem="6lV-Jj-Al9" secondAttribute="leading" constant="1" id="rqe-JP-foy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notebookList" destination="sbD-C3-6ag" id="Tuq-bP-8Jp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAk-05-f5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.9710144927537" y="-78.348214285714278"/>
         </scene>
     </scenes>
     <resources>
