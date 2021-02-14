@@ -7,5 +7,6 @@ target 'evernote_test' do
 
   # Pods for evernote_test
 pod 'EvernoteSDK', '~> 3.0'
+pod 'HTMLEntities', :git => 'https://github.com/Kitura/swift-html-entities.git'
 
 end

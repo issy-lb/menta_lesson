@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-evernote_test/Pods-evernote_test-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/EvernoteSDK/EvernoteSDK.framework
+${BUILT_PRODUCTS_DIR}/HTMLEntities/HTMLEntities.framework

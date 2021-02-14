@@ -1,16 +1,28 @@
 PODS:
   - EvernoteSDK (3.0.0)
+  - HTMLEntities (3.0.13)
 
 DEPENDENCIES:
   - EvernoteSDK (~> 3.0)
+  - HTMLEntities (from `https://github.com/Kitura/swift-html-entities.git`)
 
 SPEC REPOS:
   trunk:
     - EvernoteSDK
 
+EXTERNAL SOURCES:
+  HTMLEntities:
+    :git: https://github.com/Kitura/swift-html-entities.git
+
+CHECKOUT OPTIONS:
+  HTMLEntities:
+    :commit: 2b14531d0c36dbb7c1c45a4d38db9c2e7898a307
+    :git: https://github.com/Kitura/swift-html-entities.git
+
 SPEC CHECKSUMS:
   EvernoteSDK: 7e9de762a9c281e714f3e6d0ae10657db3046792
+  HTMLEntities: 83738511518b3f29cf9644d0877505b8d3d1a849
 
-PODFILE CHECKSUM: 9586205ab888e1afbeb4212d726e60bd5de52a49
+PODFILE CHECKSUM: d9dae24d254f01cf5bcf0fd29f87a2409118c58f
 
 COCOAPODS: 1.10.0

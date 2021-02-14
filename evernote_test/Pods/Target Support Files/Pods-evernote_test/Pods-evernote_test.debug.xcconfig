@@ -1,9 +1,11 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/EvernoteSDK"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/EvernoteSDK" "${PODS_CONFIGURATION_BUILD_DIR}/HTMLEntities"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/EvernoteSDK/EvernoteSDK.framework/Headers" $(SDKROOT)/usr/include/libxml2 ${PODS_ROOT}/Headers/Public/evernote-cloud-sdk-ios/SendToEvernoteActivity
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/EvernoteSDK/EvernoteSDK.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HTMLEntities/HTMLEntities.framework/Headers" $(SDKROOT)/usr/include/libxml2 ${PODS_ROOT}/Headers/Public/evernote-cloud-sdk-ios/SendToEvernoteActivity
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -l"xml2" -framework "CoreGraphics" -framework "EvernoteSDK" -framework "Foundation" -framework "MobileCoreServices" -framework "UIKit"
+OTHER_LDFLAGS = $(inherited) -l"xml2" -framework "CoreGraphics" -framework "EvernoteSDK" -framework "Foundation" -framework "HTMLEntities" -framework "MobileCoreServices" -framework "UIKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
