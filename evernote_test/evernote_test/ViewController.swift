@@ -6,6 +6,8 @@ class ViewController: UIViewController {
     let CONSUMER_SECRET = "362e676ef94398b6"
     var selectedNotebook:ENNotebook?
     
+    @IBOutlet weak var testImage: UIImageView!
+    
     
     @IBOutlet weak var NoteTitle: UITextField!
     @IBOutlet weak var NoteContent: UITextView!
@@ -99,7 +101,12 @@ optionalHost: ENSessionHostSandbox)
                 notebook = notebooks?[0]
                     print(notebook?.name ?? "nil")
                     note.title = title
-                    note.content = ENNoteContent(string: content)
+                    var contentArray:[Any]
+                    contentArray = [content]
+                    contentArray.append(self.testImage.image!)
+                    contentArray.append(content)
+                    contentArray.append(self.testImage.image!)
+                    note.content = ENNoteContent(contentArray: contentArray)
 //                    1つ目のノートブックに投稿する
                     session.upload(note, notebook: self.selectedNotebook, completion: { noteRef, error in
                         if error == nil {
