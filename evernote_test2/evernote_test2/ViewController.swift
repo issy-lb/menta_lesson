@@ -14,13 +14,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     
+    
     var note = Note(contents:  ["1","2","3","","5"])
+    
+    var resource = TableResourceModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.isEditing = true
-        tableView.allowsSelectionDuringEditing = true
+        tableView.dragDelegate = self
+               tableView.dropDelegate = self
+               tableView.dragInteractionEnabled = true
         
         // Do any additional setup after loading the view.
     }
@@ -41,43 +45,66 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             return true
         }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return note.contents.count
+        return resource.prefectureNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell
-        if note.contents[indexPath.row] as! String == ""{
-            cell = tableView.dequeueReusableCell(withIdentifier: "imageCell")!
-        }else{
-            cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-            let textField = cell.viewWithTag(1) as! UITextView
-//            textField.delegate = self
-//            textField.accessibilityIdentifier = indexPath.description
-            textField.text = note.contents[indexPath.row] as! String
-        }
+//        cell = tableView.dequeueReusableCell(withIdentifier: "cell2")!
+//        cell.textLabel?.text = resource.prefectureNames[indexPath.row]
+        cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let textField = cell.viewWithTag(1) as! UITextView
+//        textField.isEditable = false
+        textField.text = resource.prefectureNames[indexPath.row]
         return cell
     }
     
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-          return true
-      }
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-          // TODO: 入れ替え時の処理を実装する（データ制御など）
-      }
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .none
+
+    //スワイプしたセルを削除　※arrayNameは変数名に変更してください
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            resource.prefectureNames.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
-    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-          return false
-    }
+
     
+
 
 }
 
-//extension ViewController:UITextViewDelegate{
-//    func
-//    textFieldDidEndEditing(_ textField: UITextField) {
-//        textField.accessibilityIdentifier
-//        print("編集完了")
-//    }
-//}
+extension ViewController: UITableViewDragDelegate {
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        tableView.visibleCells.forEach{cell in
+            let textField = cell.viewWithTag(1) as! UITextView
+            textField.isEditable = false
+        }
+        // Todo: implementation
+        return [resource.dragItem(for: indexPath)]
+    }
+}
+
+extension ViewController: UITableViewDropDelegate {
+    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession,
+        withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+        return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+    }
+
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
+        guard let item = coordinator.items.first,
+            let destinationIndexPath = coordinator.destinationIndexPath,
+            let sourceIndexPath = item.sourceIndexPath else { return }
+
+        tableView.performBatchUpdates({ [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.resource.moveItem(sourcePath: sourceIndexPath.row, destinationPath: destinationIndexPath.row)
+            tableView.deleteRows(at: [sourceIndexPath], with: .automatic)
+            tableView.insertRows(at: [destinationIndexPath], with: .automatic)
+            }, completion: nil)
+        coordinator.drop(item.dragItem, toRowAt: destinationIndexPath)
+        tableView.visibleCells.forEach{cell in
+            let textField = cell.viewWithTag(1) as! UITextView
+            textField.isEditable = true
+        }
+    }
+}
