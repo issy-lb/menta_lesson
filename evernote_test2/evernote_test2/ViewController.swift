@@ -9,16 +9,29 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var inputText: UITextView!
+    
+    
+    
+    
+    var note = Note(contents:  ["1","2","3","","5"])
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.isEditing = true
         tableView.allowsSelectionDuringEditing = true
         
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onSend(_ sender: Any) {
+        note.contents.append(inputText.text!)
+        inputText.text = ""
+        tableView.reloadData()
+    }
+    
+    
 
     
     
@@ -28,17 +41,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             return true
         }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return note.contents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell
-        if indexPath.row == 3 || indexPath.row == 6{
+        if note.contents[indexPath.row] as! String == ""{
             cell = tableView.dequeueReusableCell(withIdentifier: "imageCell")!
         }else{
             cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-            let textField = cell.viewWithTag(1) as! UITextField
-        textField.text = "Item \(indexPath.row)"
+            let textField = cell.viewWithTag(1) as! UITextView
+//            textField.delegate = self
+//            textField.accessibilityIdentifier = indexPath.description
+            textField.text = note.contents[indexPath.row] as! String
         }
         return cell
     }
@@ -59,3 +74,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
 }
 
+//extension ViewController:UITextViewDelegate{
+//    func
+//    textFieldDidEndEditing(_ textField: UITextField) {
+//        textField.accessibilityIdentifier
+//        print("編集完了")
+//    }
+//}
