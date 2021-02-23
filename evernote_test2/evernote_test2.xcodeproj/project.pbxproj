@@ -13,6 +13,7 @@
 		577785BC25DEA84900EEA50E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577785BA25DEA84900EEA50E /* Main.storyboard */; };
 		577785BE25DEA84E00EEA50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577785BD25DEA84E00EEA50E /* Assets.xcassets */; };
 		577785C125DEA84E00EEA50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577785BF25DEA84E00EEA50E /* LaunchScreen.storyboard */; };
+		578857E125E53740005D1BAA /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578857E025E53740005D1BAA /* NoteCell.swift */; };
 		579D7C3425E10999009294B5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D7C3325E10999009294B5 /* Note.swift */; };
 		57A7E4AC25E523E7008C263D /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A7E4AB25E523E7008C263D /* InputView.xib */; };
 		57A7E4AF25E5241E008C263D /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E4AE25E5241E008C263D /* InputView.swift */; };
@@ -27,6 +28,7 @@
 		577785BD25DEA84E00EEA50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577785C025DEA84E00EEA50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		577785C225DEA84E00EEA50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		578857E025E53740005D1BAA /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		579D7C3325E10999009294B5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		57A7E4AB25E523E7008C263D /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
 		57A7E4AE25E5241E008C263D /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				577785B825DEA84900EEA50E /* ViewController.swift */,
 				579D7C3325E10999009294B5 /* Note.swift */,
 				577785BA25DEA84900EEA50E /* Main.storyboard */,
+				578857E025E53740005D1BAA /* NoteCell.swift */,
 				57A7E4AB25E523E7008C263D /* InputView.xib */,
 				57A7E4AE25E5241E008C263D /* InputView.swift */,
 				577785BD25DEA84E00EEA50E /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				577785B925DEA84900EEA50E /* ViewController.swift in Sources */,
 				577785B525DEA84900EEA50E /* AppDelegate.swift in Sources */,
 				57A7E4AF25E5241E008C263D /* InputView.swift in Sources */,
+				578857E125E53740005D1BAA /* NoteCell.swift in Sources */,
 				577785B725DEA84900EEA50E /* SceneDelegate.swift in Sources */,
 				579D7C3425E10999009294B5 /* Note.swift in Sources */,
 			);

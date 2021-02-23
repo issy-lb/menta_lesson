@@ -94,13 +94,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NoteCell
+        cell.initialize(resource.prefectureNames[indexPath.row]){
+            tableView.performBatchUpdates(nil, completion: nil)
+            self.resource.update(sourcePath: indexPath.row, text: cell.noteView.text)
+        }
 //        cell = tableView.dequeueReusableCell(withIdentifier: "cell2")!
 //        cell.textLabel?.text = resource.prefectureNames[indexPath.row]
-        cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        let textField = cell.viewWithTag(1) as! UITextView
+//        cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+//        let textField = cell.viewWithTag(1) as! UITextView
 //        textField.isEditable = false
-        textField.text = resource.prefectureNames[indexPath.row]
+//        textField.text = resource.prefectureNames[indexPath.row]
         return cell
     }
     

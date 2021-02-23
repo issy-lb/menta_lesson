@@ -34,4 +34,7 @@ extension TableResourceModel {
     mutating func remove(at:Int){
         prefectureNames.remove(at: at)
     }
+    mutating func update(sourcePath: Int, text:String){
+        prefectureNames[sourcePath] = text
+    }
 }
