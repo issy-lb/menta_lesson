@@ -7,9 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, InputViewDelegate{
+
+    
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var inputText: UITextView!
+
     
     
     
@@ -19,23 +21,66 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     var resource = TableResourceModel()
     
+    //    inputViewを読み込む
+    private lazy var bottomInputView:InputView = {
+        let view = InputView()
+        view.frame = .init(x: 0, y: 0, width: view.frame.width, height: 100)
+        view.delegate = self
+        return view
+    }()
     
+    func sendTapped(text: String) {
+        resource.prefectureNames.append(text)
+        tableView.reloadData()
+        scrollToBottom()
+    }
+    override var inputAccessoryView: UIView?{
+        return bottomInputView
+    }
+    override var canBecomeFirstResponder: Bool{
+        return true
+    }
+    
+    
+    
+            
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dragDelegate = self
                tableView.dropDelegate = self
                tableView.dragInteractionEnabled = true
+        tableView.keyboardDismissMode = .interactive
         
         // Do any additional setup after loading the view.
+        
+        
+        //    キーボード表示・非表示のメソッド
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60.0, right: 0)
+        
+    }
+    @objc func keyboardWillShow(_ notification:Notification){
+        if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
+            let keyboardHeight = keyboardFrame.cgRectValue.height
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+            scrollToBottom()
+        }
+    }
+    @objc func keyboardWillHide(_ notification:Notification){
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60.0, right: 0)
     }
     
-    @IBAction func onSend(_ sender: Any) {
-        note.contents.append(inputText.text!)
-        inputText.text = ""
-        tableView.reloadData()
+ 
+    
+    func scrollToBottom(){
+        let rowNum = tableView.numberOfRows(inSection: 0)
+        if rowNum != 0 {
+            tableView.scrollToRow(at: IndexPath(row: rowNum-1, section: 0), at: .bottom, animated: true)
+        }
     }
-    
-    
+
 
     
     

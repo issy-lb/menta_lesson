@@ -11,14 +11,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="evernote_test2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="anr-6f-YiT">
-                                <rect key="frame" x="0.0" y="144" width="414" height="698"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.99668759110000005" green="1" blue="0.99626010659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -32,9 +31,6 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="あああ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-O9-D4N">
                                                     <rect key="frame" x="10" y="5" width="394" height="60"/>
                                                     <color key="backgroundColor" red="0.9795874953" green="0.97972780469999998" blue="0.97955685849999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="EAn-fk-aCu"/>
-                                                    </constraints>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -44,6 +40,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="oKj-O9-D4N" secondAttribute="bottom" constant="5" id="9dK-iZ-N2Q"/>
                                                 <constraint firstItem="oKj-O9-D4N" firstAttribute="centerY" secondItem="XOG-0r-Gcf" secondAttribute="centerY" id="JU0-zm-CDo"/>
                                                 <constraint firstAttribute="trailing" secondItem="oKj-O9-D4N" secondAttribute="trailing" constant="10" id="VOf-i5-yY4"/>
+                                                <constraint firstAttribute="height" secondItem="oKj-O9-D4N" secondAttribute="height" multiplier="1.16667" id="Vev-AE-pgo"/>
                                                 <constraint firstItem="oKj-O9-D4N" firstAttribute="leading" secondItem="XOG-0r-Gcf" secondAttribute="leading" constant="10" id="adp-Hp-Ax1"/>
                                                 <constraint firstItem="oKj-O9-D4N" firstAttribute="top" secondItem="XOG-0r-Gcf" secondAttribute="top" constant="5" id="viJ-PM-w23"/>
                                                 <constraint firstItem="oKj-O9-D4N" firstAttribute="centerX" secondItem="XOG-0r-Gcf" secondAttribute="centerX" id="yTS-fN-HLT"/>
@@ -88,49 +85,28 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bb9-bb-nkQ"/>
                                 </connections>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あああ" translatesAutoresizingMaskIntoConstraints="NO" id="Qwv-9y-mM4">
-                                <rect key="frame" x="5" y="49" width="379" height="90"/>
-                                <color key="backgroundColor" red="0.9591724277" green="0.95930999520000004" blue="0.9591422677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a2-sf-9m0">
-                                <rect key="frame" x="389" y="94" width="21" height="22"/>
-                                <state key="normal" image="paperplane" catalog="system"/>
-                                <connections>
-                                    <action selector="onSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Urf-xA-tKK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.99668759110000005" green="1" blue="0.99626010659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="anr-6f-YiT" secondAttribute="trailing" id="GI1-yq-Hb4"/>
-                            <constraint firstItem="Qwv-9y-mM4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Gnp-95-ZsU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="anr-6f-YiT" secondAttribute="bottom" constant="20" id="PBL-WX-VXR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2a2-sf-9m0" secondAttribute="trailing" constant="4" id="Pit-Qf-Afb"/>
-                            <constraint firstItem="2a2-sf-9m0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Uvv-Vt-pS3"/>
-                            <constraint firstItem="Qwv-9y-mM4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Y4W-F1-CUn"/>
-                            <constraint firstItem="anr-6f-YiT" firstAttribute="top" secondItem="Qwv-9y-mM4" secondAttribute="bottom" constant="5" id="YVh-rd-hM3"/>
-                            <constraint firstItem="anr-6f-YiT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="n5H-Ue-wiR"/>
+                            <constraint firstItem="anr-6f-YiT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n5H-Ue-wiR"/>
                             <constraint firstItem="anr-6f-YiT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rOL-eF-PIn"/>
-                            <constraint firstItem="2a2-sf-9m0" firstAttribute="leading" secondItem="Qwv-9y-mM4" secondAttribute="trailing" constant="5" id="t2T-3o-C4U"/>
                             <constraint firstItem="anr-6f-YiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xVq-zL-KNw"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="inputText" destination="Qwv-9y-mM4" id="CuV-uW-XPk"/>
                         <outlet property="tableView" destination="anr-6f-YiT" id="ouw-r5-i82"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-204" y="107"/>
         </scene>
     </scenes>
     <resources>
         <image name="Y8Tug1aQiMQNyZJNEgNfhHpbu703" width="248" height="215"/>
-        <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
