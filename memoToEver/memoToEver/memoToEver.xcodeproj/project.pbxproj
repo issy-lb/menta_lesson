@@ -7,35 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		577785B525DEA84900EEA50E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577785B425DEA84900EEA50E /* AppDelegate.swift */; };
-		577785B725DEA84900EEA50E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577785B625DEA84900EEA50E /* SceneDelegate.swift */; };
-		577785B925DEA84900EEA50E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577785B825DEA84900EEA50E /* ViewController.swift */; };
-		577785BC25DEA84900EEA50E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577785BA25DEA84900EEA50E /* Main.storyboard */; };
-		577785BE25DEA84E00EEA50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577785BD25DEA84E00EEA50E /* Assets.xcassets */; };
-		577785C125DEA84E00EEA50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577785BF25DEA84E00EEA50E /* LaunchScreen.storyboard */; };
-		578857E125E53740005D1BAA /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578857E025E53740005D1BAA /* NoteCell.swift */; };
-		579D7C3425E10999009294B5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D7C3325E10999009294B5 /* Note.swift */; };
-		57A7E4AC25E523E7008C263D /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A7E4AB25E523E7008C263D /* InputView.xib */; };
-		57A7E4AF25E5241E008C263D /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E4AE25E5241E008C263D /* InputView.swift */; };
+		57A8CAE925EA16DB0042B24B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A8CAE825EA16DB0042B24B /* AppDelegate.swift */; };
+		57A8CAEB25EA16DB0042B24B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A8CAEA25EA16DB0042B24B /* SceneDelegate.swift */; };
+		57A8CAED25EA16DB0042B24B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A8CAEC25EA16DB0042B24B /* ViewController.swift */; };
+		57A8CAF025EA16DB0042B24B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A8CAEE25EA16DB0042B24B /* Main.storyboard */; };
+		57A8CAF225EA16DF0042B24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A8CAF125EA16DF0042B24B /* Assets.xcassets */; };
+		57A8CAF525EA16DF0042B24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A8CAF325EA16DF0042B24B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		577785B125DEA84900EEA50E /* evernote_test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evernote_test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		577785B425DEA84900EEA50E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		577785B625DEA84900EEA50E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		577785B825DEA84900EEA50E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		577785BB25DEA84900EEA50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		577785BD25DEA84E00EEA50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		577785C025DEA84E00EEA50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		577785C225DEA84E00EEA50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		578857E025E53740005D1BAA /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
-		579D7C3325E10999009294B5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		57A7E4AB25E523E7008C263D /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
-		57A7E4AE25E5241E008C263D /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		57A8CAE525EA16DB0042B24B /* memoToEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoToEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A8CAE825EA16DB0042B24B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57A8CAEA25EA16DB0042B24B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		57A8CAEC25EA16DB0042B24B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57A8CAEF25EA16DB0042B24B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57A8CAF125EA16DF0042B24B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57A8CAF425EA16DF0042B24B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57A8CAF625EA16DF0042B24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		577785AE25DEA84800EEA50E /* Frameworks */ = {
+		57A8CAE225EA16DB0042B24B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,75 +37,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		577785A825DEA84800EEA50E = {
+		57A8CADC25EA16DB0042B24B = {
 			isa = PBXGroup;
 			children = (
-				577785B325DEA84900EEA50E /* evernote_test2 */,
-				577785B225DEA84900EEA50E /* Products */,
+				57A8CAE725EA16DB0042B24B /* memoToEver */,
+				57A8CAE625EA16DB0042B24B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		577785B225DEA84900EEA50E /* Products */ = {
+		57A8CAE625EA16DB0042B24B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				577785B125DEA84900EEA50E /* evernote_test2.app */,
+				57A8CAE525EA16DB0042B24B /* memoToEver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		577785B325DEA84900EEA50E /* evernote_test2 */ = {
+		57A8CAE725EA16DB0042B24B /* memoToEver */ = {
 			isa = PBXGroup;
 			children = (
-				577785B425DEA84900EEA50E /* AppDelegate.swift */,
-				577785B625DEA84900EEA50E /* SceneDelegate.swift */,
-				577785B825DEA84900EEA50E /* ViewController.swift */,
-				579D7C3325E10999009294B5 /* Note.swift */,
-				577785BA25DEA84900EEA50E /* Main.storyboard */,
-				578857E025E53740005D1BAA /* NoteCell.swift */,
-				57A7E4AB25E523E7008C263D /* InputView.xib */,
-				57A7E4AE25E5241E008C263D /* InputView.swift */,
-				577785BD25DEA84E00EEA50E /* Assets.xcassets */,
-				577785BF25DEA84E00EEA50E /* LaunchScreen.storyboard */,
-				577785C225DEA84E00EEA50E /* Info.plist */,
+				57A8CAE825EA16DB0042B24B /* AppDelegate.swift */,
+				57A8CAFE25EA17AB0042B24B /* Views */,
+				57A8CAEA25EA16DB0042B24B /* SceneDelegate.swift */,
+				57A8CAF125EA16DF0042B24B /* Assets.xcassets */,
+				57A8CAF325EA16DF0042B24B /* LaunchScreen.storyboard */,
+				57A8CAF625EA16DF0042B24B /* Info.plist */,
 			);
-			path = evernote_test2;
+			path = memoToEver;
+			sourceTree = "<group>";
+		};
+		57A8CAFE25EA17AB0042B24B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57A8CAEC25EA16DB0042B24B /* ViewController.swift */,
+				57A8CAEE25EA16DB0042B24B /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		577785B025DEA84800EEA50E /* evernote_test2 */ = {
+		57A8CAE425EA16DB0042B24B /* memoToEver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 577785C525DEA84E00EEA50E /* Build configuration list for PBXNativeTarget "evernote_test2" */;
+			buildConfigurationList = 57A8CAF925EA16DF0042B24B /* Build configuration list for PBXNativeTarget "memoToEver" */;
 			buildPhases = (
-				577785AD25DEA84800EEA50E /* Sources */,
-				577785AE25DEA84800EEA50E /* Frameworks */,
-				577785AF25DEA84800EEA50E /* Resources */,
+				57A8CAE125EA16DB0042B24B /* Sources */,
+				57A8CAE225EA16DB0042B24B /* Frameworks */,
+				57A8CAE325EA16DB0042B24B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = evernote_test2;
-			productName = evernote_test2;
-			productReference = 577785B125DEA84900EEA50E /* evernote_test2.app */;
+			name = memoToEver;
+			productName = memoToEver;
+			productReference = 57A8CAE525EA16DB0042B24B /* memoToEver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		577785A925DEA84800EEA50E /* Project object */ = {
+		57A8CADD25EA16DB0042B24B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					577785B025DEA84800EEA50E = {
+					57A8CAE425EA16DB0042B24B = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
-			buildConfigurationList = 577785AC25DEA84800EEA50E /* Build configuration list for PBXProject "evernote_test2" */;
+			buildConfigurationList = 57A8CAE025EA16DB0042B24B /* Build configuration list for PBXProject "memoToEver" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,59 +117,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 577785A825DEA84800EEA50E;
-			productRefGroup = 577785B225DEA84900EEA50E /* Products */;
+			mainGroup = 57A8CADC25EA16DB0042B24B;
+			productRefGroup = 57A8CAE625EA16DB0042B24B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				577785B025DEA84800EEA50E /* evernote_test2 */,
+				57A8CAE425EA16DB0042B24B /* memoToEver */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		577785AF25DEA84800EEA50E /* Resources */ = {
+		57A8CAE325EA16DB0042B24B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577785C125DEA84E00EEA50E /* LaunchScreen.storyboard in Resources */,
-				57A7E4AC25E523E7008C263D /* InputView.xib in Resources */,
-				577785BE25DEA84E00EEA50E /* Assets.xcassets in Resources */,
-				577785BC25DEA84900EEA50E /* Main.storyboard in Resources */,
+				57A8CAF525EA16DF0042B24B /* LaunchScreen.storyboard in Resources */,
+				57A8CAF225EA16DF0042B24B /* Assets.xcassets in Resources */,
+				57A8CAF025EA16DB0042B24B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		577785AD25DEA84800EEA50E /* Sources */ = {
+		57A8CAE125EA16DB0042B24B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577785B925DEA84900EEA50E /* ViewController.swift in Sources */,
-				577785B525DEA84900EEA50E /* AppDelegate.swift in Sources */,
-				57A7E4AF25E5241E008C263D /* InputView.swift in Sources */,
-				578857E125E53740005D1BAA /* NoteCell.swift in Sources */,
-				577785B725DEA84900EEA50E /* SceneDelegate.swift in Sources */,
-				579D7C3425E10999009294B5 /* Note.swift in Sources */,
+				57A8CAED25EA16DB0042B24B /* ViewController.swift in Sources */,
+				57A8CAE925EA16DB0042B24B /* AppDelegate.swift in Sources */,
+				57A8CAEB25EA16DB0042B24B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		577785BA25DEA84900EEA50E /* Main.storyboard */ = {
+		57A8CAEE25EA16DB0042B24B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				577785BB25DEA84900EEA50E /* Base */,
+				57A8CAEF25EA16DB0042B24B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		577785BF25DEA84E00EEA50E /* LaunchScreen.storyboard */ = {
+		57A8CAF325EA16DF0042B24B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				577785C025DEA84E00EEA50E /* Base */,
+				57A8CAF425EA16DF0042B24B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -181,7 +173,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		577785C325DEA84E00EEA50E /* Debug */ = {
+		57A8CAF725EA16DF0042B24B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -242,7 +234,7 @@
 			};
 			name = Debug;
 		};
-		577785C425DEA84E00EEA50E /* Release */ = {
+		57A8CAF825EA16DF0042B24B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -287,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -297,66 +289,68 @@
 			};
 			name = Release;
 		};
-		577785C625DEA84E00EEA50E /* Debug */ = {
+		57A8CAFA25EA16DF0042B24B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SWJPRF34A;
-				INFOPLIST_FILE = evernote_test2/Info.plist;
+				INFOPLIST_FILE = memoToEver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flarebrow.theapp.evernote-test2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flarebrow.theapp.memoToEver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		577785C725DEA84E00EEA50E /* Release */ = {
+		57A8CAFB25EA16DF0042B24B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SWJPRF34A;
-				INFOPLIST_FILE = evernote_test2/Info.plist;
+				INFOPLIST_FILE = memoToEver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flarebrow.theapp.evernote-test2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flarebrow.theapp.memoToEver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		577785AC25DEA84800EEA50E /* Build configuration list for PBXProject "evernote_test2" */ = {
+		57A8CAE025EA16DB0042B24B /* Build configuration list for PBXProject "memoToEver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				577785C325DEA84E00EEA50E /* Debug */,
-				577785C425DEA84E00EEA50E /* Release */,
+				57A8CAF725EA16DF0042B24B /* Debug */,
+				57A8CAF825EA16DF0042B24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		577785C525DEA84E00EEA50E /* Build configuration list for PBXNativeTarget "evernote_test2" */ = {
+		57A8CAF925EA16DF0042B24B /* Build configuration list for PBXNativeTarget "memoToEver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				577785C625DEA84E00EEA50E /* Debug */,
-				577785C725DEA84E00EEA50E /* Release */,
+				57A8CAFA25EA16DF0042B24B /* Debug */,
+				57A8CAFB25EA16DF0042B24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 577785A925DEA84800EEA50E /* Project object */;
+	rootObject = 57A8CADD25EA16DB0042B24B /* Project object */;
 }

@@ -60,7 +60,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60.0, right: 0)
         
+//        終了する直前
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
+    @objc func didEnterBackground(_ notification:Notification){
+        print("アプリ終了")
+    }
+    
+//    アプリ終了時の処理
     @objc func keyboardWillShow(_ notification:Notification){
         if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
             let keyboardHeight = keyboardFrame.cgRectValue.height
